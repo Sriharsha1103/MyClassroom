@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreen">
+
+    <ImageView
+        android:id="@+id/_login_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/content_description"
+        android:layout_marginStart="@dimen/normal_2x"
+        android:layout_marginTop="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal_2x"
+        android:layout_marginBottom="@dimen/normal"
+        android:src="@drawable/login"
+        app:layout_constraintBottom_toTopOf="@id/_login_userName_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/_login_userName_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal"
+        app:boxCornerRadiusBottomEnd="@dimen/min_dimen"
+        app:boxCornerRadiusBottomStart="@dimen/min_dimen"
+        app:boxCornerRadiusTopStart="@dimen/min_dimen"
+        app:boxCornerRadiusTopEnd="@dimen/min_dimen"
+        app:layout_constraintBottom_toTopOf="@id/_login_password_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/_login_image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/_login_userName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="username"
+            android:hint="@string/username" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/_login_password_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal"
+        app:boxCornerRadiusBottomEnd="@dimen/min_dimen"
+        app:boxCornerRadiusBottomStart="@dimen/min_dimen"
+        app:boxCornerRadiusTopStart="@dimen/min_dimen"
+        app:boxCornerRadiusTopEnd="@dimen/min_dimen"
+        app:layout_constraintBottom_toTopOf="@id/_login_btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/_login_userName_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="password"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/_login_btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal"
+        android:text="@string/signin"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/_login_password_layout" />
+
+    <TextView
+        android:id="@+id/_login_newUser_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/if_new_user"
+        app:layout_constraintBaseline_toBaselineOf="@id/_login_btn_newUser"
+        app:layout_constraintEnd_toStartOf="@+id/_login_btn_newUser"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/_login_btn_login" />
+
+    <Button
+        android:id="@+id/_login_btn_newUser"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal"
+        android:text="@string/register"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/_login_newUser_text"
+        app:layout_constraintTop_toBottomOf="@id/_login_btn_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

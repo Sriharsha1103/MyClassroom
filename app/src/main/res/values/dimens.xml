@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_2x">32dp</dimen>
+    <dimen name="normal">16dp</dimen>
+    <dimen name="min_dimen">8dp</dimen>
+</resources>

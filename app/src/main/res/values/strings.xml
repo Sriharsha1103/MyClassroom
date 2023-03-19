@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MyClassroom</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signin">SignIn</string>
+    <string name="if_new_user">If new user,</string>
+    <string name="register">Register</string>
+    <string name="login_title">Login</string>
+    <string name="content_description">Logo</string>
 </resources>
